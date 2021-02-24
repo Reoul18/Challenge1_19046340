@@ -1,0 +1,29 @@
+@font-face{
+    font-family:'Nasalization';
+    src:url('Fonts/nasalization-rg-webfont.woff');
+}
+
+body{
+	background-color: black;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+	color: #ffffff;
+	font-family: Nasalization;
+	font-size: 12px;
+    margin: 20px;
+}
+
+h1, footer, .a{ 
+    text-align: center;
+}
+
+.memo{
+    font-style: italic;
+    color: rgb(252, 231, 191);
+}
+
+h2,p{
+    margin: 20px;
+}
+
