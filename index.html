@@ -5,6 +5,7 @@
 		<title>Challenge1_RL</title>
 		<link type="text/css" href="style.css" rel="stylesheet" />
 		<script type="text/javascript" src="script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	</head>
 	<body>
         <div class="kop">
@@ -15,9 +16,19 @@
             <p>
                 We vliegen met 12465.75342 km/h om op tijd in Mars te komen. 
                 Hier krijgt u de mogelijkheid om de snelheid van ons racket te versnellen. 
-                ps: De benzine zal wel sneller op raken.
+                ps: De benzine zal wel sneller op raken.<br /><br />
+                Speed
             </p>
-            <p class="memo">Hier komt een snelheidsbalk</p>
+            <div id="snelheidsbalk">
+                <div id="balk"> </div>
+            </div> 
+            <div class="a"><span id="speed"> nog niet ingevuld </span>km/h</div>
+            <p>Rocket Fuel</p>
+            <div id="gasbalk">
+                <div id="balk"> </div>
+            </div>
+            <div class="a"> <span id="range"> nog niet ingevuld</span>kL</div>
+            <input type="button" name="gas" id="gas" value="Geef Gas">
         </div>
         <div class="afstand">
             <h2>Afstand per Maand</h2>
@@ -25,7 +36,7 @@
                 De afstand tussen de Aarde en Mars is 54.600.000 km. 
             Hier kunt u zien hoever we zullen zijn gebaseerd op de maanden in de ruimte.
             </p>
-            <p class="memo">Hier komt een line chart</p>
+            <canvas id="myChart"></canvas>
         </div>
         <div class="route">
             <h2>Route Vergelijking</h2>
@@ -33,7 +44,7 @@
                 Er zijn veel routes coordinaten om naar Mars te gaan. Hier kunt u de vergeliking tussen twee routes.
                 ps: We nemen geen van deze 2 routes omdat ze gevaarlijk zijn.
             </p>
-            <p class="memo"> Hier komt een radar chart </p>
+            <canvas id="myChart2"></canvas>
         </div>
 	</body>
     <footer>
