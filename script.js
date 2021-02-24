@@ -1,11 +1,13 @@
-var s = 13;
-var r = 150;
+var s = 10;
+var r = 100;
 
 /*var kleding = [10, 15, 5, 90]; voor staafdiagram*/ 
 
 document.getElementById('speed').innerHTML = s;
 document.getElementById('balk').style.width = s+'%';
 
+document.getElementById('range').innerHTML = r;
+document.getElementById('fuelbalk').style.width = r-'%';
 
 document.getElementById('gas').onclick = function(){
     s += 10;
@@ -16,16 +18,24 @@ document.getElementById('gas').onclick = function(){
     document.getElementById('speed').innerHTML = s;
     document.getElementById('balk').style.width = s+'%';
 
+    r -= 5;
+
+    if(r<55){
+         r=55;
+    }
+    document.getElementById('range').innerHTML = r;
+    document.getElementById('fuelbalk').style.width = r+'%';
+
 };
 
-var ctx = document.getElementById ('myChart').getContext ('2d');
-var chart = new Chart(ctx, {
+var lijn = document.getElementById ('myChart').getContext ('2d');
+var chart = new Chart(lijn, {
     type: 'line',
     data: {
         labels: ['Jan', 'Feb', 'Maa', 'Apr', 'Mei', 'Jun', 'Jul'],
         datasets: [{
             label: 'Distance Progress',
-            backgroundColor: 'gray',
+            backgroundColor: 'rgba(206, 214, 240, 0.3)',
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
@@ -45,18 +55,27 @@ var chart = new Chart(ctx, {
     }
 });
 
-var ctr = document.getElementById ('myChart2').getContext ('2d');
-var myRadarChart = new Chart(ctr, {
+var rad = document.getElementById ('myChart2').getContext ('2d');
+var myRadarChart = new Chart(rad, {
     type: 'radar',
     data: {
         labels: ['Turbulence', 'Meteorite Regen', 'Black Hole Gevaar', 'Hittegolf'],
         datasets: [{
             label: 'Route',
+            backgroundColor: 'rgba(255, 0, 0, 0.3)',
             data: [40, 50, 50, 20],
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
-            pointBorderWidth: '3'
+            pointBorderWidth: '1'
+    },{ 
+            label : 'Route 2',
+            backgroundColor: 'rgba(0, 60, 255, 0.3)',
+            data: [70, 80, 80, 40],
+            borderColor: 'white',
+            pointBorderColor: 'white',
+            pointStyle: 'star',
+            pointBorderWidth: '1'
         }]
     },
     options: {
