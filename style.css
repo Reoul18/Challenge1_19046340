@@ -14,17 +14,18 @@ body{
     margin: 20px;
 }
 
-h1, footer, .a{ 
+h1, h3, .speed, .range{ 
     text-align: center;
 }
 
-.memo{
+/*.memo{
     font-style: italic;
     color: rgb(252, 231, 191);
 }
+*/
 
 .snelheid, .afstand, .route{
-    background-color: rgb(65, 101, 110);
+    background-color: rgba(65, 101, 110, 0.5);
     border-radius: 25px;
 }
 
@@ -60,4 +61,108 @@ input{
     font-family: Nasalization;
     color: rgb(255, 255, 255);
     background-color: black;
+}
+
+.text{
+    display: none;
+}
+
+/* Layout*/
+.snelheid{
+    grid-area: snelheid;
+}
+.afstand{
+    grid-area: afstand;
+}
+.route{
+    grid-area:route;
+}
+#snelheidsbalk{
+    grid-area: snelheidsbalk;
+}
+#gasbalk{
+    grid-area: gasbalk;
+}
+.title{
+    grid-area: title;
+}
+.title2{
+    grid-area: title2;
+}
+.speed{
+    grid-area: speed;
+}
+.range{
+    grid-area: range;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "snelheid"
+    "afstand"
+    "route";
+    gap: 15px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1365px){
+    .text{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1919px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "snelheid"
+        "afstand"
+        "route";
+        gap: 15px;
+    }
+
+    body{
+        font-size: 17px;
+    }
+
+    .balken{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "title title2" 
+        "snelheidsbalk gasbalk"
+        "speed range";
+    } 
+    .text{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "snelheid snelheid"
+        "afstand route";
+        gap: 15px;
+    }    
+    .balken{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "title title2" 
+        "snelheidsbalk gasbalk"
+        "speed range";
+    }
+    .text{
+        display: block;
+    }
+
+    body{
+        font-size: 20px;
+    }
+
 }

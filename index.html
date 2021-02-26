@@ -11,41 +11,45 @@
         <div class="kop">
 	        <h1> Interplanetary Transport System Interface (ITSI)  </h1>
         </div>
-        <div class="snelheid">
-            <h2>Snelheid van de Raket</h2>
-            <p>
-                We vliegen met 12465.75342 km/h om op tijd in Mars te komen. 
-                Hier krijgt u de mogelijkheid om de snelheid van ons racket te versnellen. 
-                ps: De benzine zal wel sneller op raken.<br /><br />
-                Speed
-            </p>
-            <div id="snelheidsbalk">
-                <div id="balk"> </div>
-            </div> 
-            <div class="a"><span id="speed"> nog niet ingevuld </span>km/h</div>
-            <p>Rocket Fuel</p>
-            <div id="gasbalk">
-                <div id="fuelbalk"> </div>
+        <main>
+            <div class="snelheid">
+                <h2>Snelheid van de Raket</h2>
+                <p class="text">
+                    We vliegen met 12465.75342 km/h om op tijd in Mars te komen.
+                    Hier krijgt u de mogelijkheid om de snelheid van ons racket te versnellen. <br />
+                    ps: De benzine zal wel sneller op raken.<br /><br />
+                </P>
+                <div class="balken">
+                    <P class="title">Speed (in 10k)</p>
+                        <div id="snelheidsbalk">
+                            <div id="balk"> </div>
+                        </div> 
+                        <div class="speed"><span id="speed"> nog niet ingevuld </span>km/h</div>
+                    <p class="title2">Rocket Fuel (in 100k)</p>
+                        <div id="gasbalk">
+                            <div id="fuelbalk"> </div>
+                        </div>
+                    <div class="range"> <span id="range"> nog niet ingevuld</span>kL</div>
+                 </div>
+                <input type="button" name="gas" id="gas" value="Geef Gas">
             </div>
-            <div class="a"> <span id="range"> nog niet ingevuld</span>kL</div>
-            <input type="button" name="gas" id="gas" value="Geef Gas">
-        </div>
-        <div class="afstand">
-            <h2>Afstand per Maand</h2>
-            <p>
+            <div class="afstand">
+                <h2>Afstand per Maand</h2>
+                <p class="text">
                 De afstand tussen de Aarde en Mars is 54.600.000 km. 
-            Hier kunt u zien hoever we zullen zijn gebaseerd op de maanden in de ruimte.
-            </p>
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="route">
-            <h2>Route Vergelijking</h2>
-            <p>
-                Er zijn veel routes coordinaten om naar Mars te gaan. Hier kunt u de vergeliking tussen twee routes.
-                ps: We nemen geen van deze 2 routes omdat ze gevaarlijk zijn.
-            </p>
-            <canvas id="myChart2"></canvas>
-        </div>
+                Hier kunt u zien hoever we zullen zijn gebaseerd op de maanden in de ruimte.
+                </p>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="route">
+                <h2>Route Vergelijking</h2>
+                <p class="text">
+                    Er zijn veel routes coordinaten om naar Mars te gaan. Hier kunt u de vergeliking tussen twee routes.<br />
+                    ps: We nemen geen van deze 2 routes omdat ze gevaarlijk zijn.
+                </p>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </main>
 	</body>
     <footer>
         <h3>Nog een hele fijne reis !</h3>

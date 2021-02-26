@@ -13,7 +13,8 @@ document.getElementById('gas').onclick = function(){
     s += 10;
 
      if(s > 100){
-         s = 100;
+        s = 100;
+        alert('We kunnen niet sneller gaan !');
     }
     document.getElementById('speed').innerHTML = s;
     document.getElementById('balk').style.width = s+'%';
@@ -35,23 +36,20 @@ var chart = new Chart(lijn, {
         labels: ['Jan', 'Feb', 'Maa', 'Apr', 'Mei', 'Jun', 'Jul'],
         datasets: [{
             label: 'Distance Progress',
-            backgroundColor: 'rgba(206, 214, 240, 0.3)',
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
-            pointBorderWidth: '5',
+            pointBorderWidth: '20',
             data: [0, 9.1, 18.2, 27.3, 36.4, 36.4, 45.5, 54.6],
         }]
     },
-
-    // Configuration options go here
     options: {
-        legend: {
-            labels: {
-                fontFamily :'Nasalization',
-                fontColor: 'white'
+            legend: {
+                labels: {
+                    fontFamily :'Nasalization',
+                    fontColor: 'white'
             }
-        }
+            }
     }
 });
 
@@ -91,7 +89,7 @@ var myRadarChart = new Chart(rad, {
         legend: {
             labels: {
                 fontFamily :'Nasalization',
-                fontColor: 'white',
+                fontColor: 'white'
             }
         }
     }
