@@ -3,6 +3,7 @@
     src:url('Fonts/nasalization-rg-webfont.woff');
 }
 
+
 body{
 	background-color: black;
     background-image: url("background.jpg");
@@ -10,11 +11,11 @@ body{
     background-position: center center;
 	color: #ffffff;
 	font-family: Nasalization;
-	font-size: 12px;
+	font-size: 25px;
     margin: 20px;
 }
 
-h1, h3, .speed, .range{ 
+h1, footer, .speed, .range{ 
     text-align: center;
 }
 
@@ -24,16 +25,18 @@ h1, h3, .speed, .range{
 }
 */
 
-.snelheid, .afstand, .route{
+.snelheid, .afstand, .route, .gravity{
     background-color: rgba(65, 101, 110, 0.5);
     border-radius: 25px;
-}
-
-h2,p{
+    padding: 20px;
     margin: 20px;
 }
 
-#snelheidsbalk, #gasbalk  {
+h3,p{
+    margin: 20px;
+}
+
+#snelheidsbalk, #gasbalk{
     position: relative;
     background-color: rgb(255, 255, 255);
     margin: 30px;
@@ -55,17 +58,26 @@ h2,p{
 input{
     margin-left: 30px;
     margin-bottom: 20px;
-    width: 150px;
-    height: 50px;
+    width: 170px;
+    height: 55px;
     font-size: 25px;
     font-family: Nasalization;
     color: rgb(255, 255, 255);
     background-color: black;
 }
 
-.text{
+.text, .logo{
     display: none;
 }
+
+img{
+    width: 600px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+
 
 /* Layout*/
 .snelheid{
@@ -95,20 +107,22 @@ input{
 .range{
     grid-area: range;
 }
-
-main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "snelheid"
-    "afstand"
-    "route";
-    gap: 15px;
+.gravity{
+    grid-area: gravity;
+}
+.logo{
+    grid-area: logo;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1365px){
-    .text{
-        display: block;
+    body{
+        font-size: 15px;
+    }
+    
+    input{
+        width: 115px;
+        height: 35px;
+        font-size: 18px;
     }
 }
 
@@ -119,8 +133,9 @@ main{
         grid-template-areas: 
         "snelheid"
         "afstand"
-        "route";
-        gap: 15px;
+        "route"
+        "gravity";
+        gap: 20px;
     }
 
     body{
@@ -138,6 +153,11 @@ main{
     .text{
         display: block;
     }
+    input{
+        width: 130px;
+        height: 40px;
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 1920px){
@@ -146,8 +166,9 @@ main{
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "snelheid snelheid"
-        "afstand route";
-        gap: 15px;
+        "afstand route"
+        "gravity logo";
+        gap: 20px;
     }    
     .balken{
         display: grid;
@@ -164,5 +185,8 @@ main{
     body{
         font-size: 20px;
     }
-
+    .logo{
+        display: block;
+        padding-top: 180px;
+    }
 }

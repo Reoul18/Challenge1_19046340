@@ -1,3 +1,6 @@
+Chart.defaults.global.defaultFontColor = '#ffffff'
+Chart.defaults.global.defaultFontFamily = 'Nasalization'
+
 var s = 10;
 var r = 100;
 
@@ -39,7 +42,8 @@ var chart = new Chart(lijn, {
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
-            pointBorderWidth: '20',
+            pointBorderWidth: '10',
+            lineTension:'0',
             data: [0, 9.1, 18.2, 27.3, 36.4, 36.4, 45.5, 54.6],
         }]
     },
@@ -57,7 +61,7 @@ var rad = document.getElementById ('myChart2').getContext ('2d');
 var myRadarChart = new Chart(rad, {
     type: 'radar',
     data: {
-        labels: ['Turbulence', 'Meteorite Regen', 'Black Hole Gevaar', 'Hittegolf'],
+        labels: ['Turbulence', 'Meteorit Rain', 'Black Hole Danger', 'Heatwave'],
         datasets: [{
             label: 'Route',
             backgroundColor: 'rgba(255, 0, 0, 0.3)',
@@ -91,6 +95,39 @@ var myRadarChart = new Chart(rad, {
                 fontFamily :'Nasalization',
                 fontColor: 'white'
             }
+        }
+    }
+});
+
+var bars = document.getElementById ('myChart3').getContext ('2d');
+var myBarChart = new Chart(bars, {
+    type: 'bar',
+    data: { 
+        labels: ['Jan', 'Feb', 'Maa', 'Apr', 'Mei', 'Jun', 'Jul'],
+        datasets: [{
+            label: 'Zwartekracht in m/s²',
+            barThickness: 1,
+            maxBarThickness: 3,
+            minBarLength: 1,
+            data: [9, 8, 7, 6, 5, 4, 3, 0],
+            backgroundColor: 'rgb(0, 60, 255)',
+            hoverBackgroundColor: 'rgba(66, 105, 140, 0.3)',
+            borderColor: 'rgba(0, 60, 255, 0.3)'
+        }]
+    },
+    options: {
+        legend: {
+            labels: {
+                fontFamily :'Nasalization',
+                fontColor: 'white'
+            }
+        },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    offsetGridLines: true
+                }
+            }]
         }
     }
 });
