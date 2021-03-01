@@ -69,7 +69,7 @@ var myRadarChart = new Chart(rad, {
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
-            pointBorderWidth: '1'
+            pointBorderWidth: '5'
     },{ 
             label : 'Route 2',
             backgroundColor: 'rgba(0, 60, 255, 0.3)',
@@ -77,7 +77,7 @@ var myRadarChart = new Chart(rad, {
             borderColor: 'white',
             pointBorderColor: 'white',
             pointStyle: 'star',
-            pointBorderWidth: '1'
+            pointBorderWidth: '5'
         }]
     },
     options: {
