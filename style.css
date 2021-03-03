@@ -10,9 +10,8 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
 	font-family: Nasalization;
-    margin: 20px;
+    margin: 10px;
     color: white;
-    font-size: 20px;
 }
 
 h1, footer, .speed, .range{ 
@@ -22,12 +21,16 @@ h1, footer, .speed, .range{
 .snelheid, .afstand, .route, .gravity{
     background-color: rgba(65, 101, 110, 0.5);
     border-radius: 25px;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 
-h3,p{
-    margin: 20px;
+h4,p{
+    margin: 10px;
+}
+
+.title, .title2{
+    font-size: 15px;
 }
 
 #snelheidsbalk, #gasbalk{
@@ -116,7 +119,7 @@ img{
     }
 
     body{
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
@@ -132,7 +135,7 @@ img{
     }
 
     body{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .balken{
@@ -169,10 +172,11 @@ img{
     .text{
         display: block;
     }
-
+    
     body{
-        font-size: 20px;
+        font-size: 16px;
     }
+
     .logo{
         display: block;
         padding-top: 180px;
